@@ -1,0 +1,13 @@
+{% extends 'detect/base.html' %}
+
+{% block title %}Detection Result{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>Detection Result</h2>
+        <div class="image-container">
+            <img src="data:image/jpeg;base64,{{ image_base64 }}" alt="Result Image"/>
+        </div>
+        <a href="{% url 'upload' %}"><button><i class="fas fa-arrow-left"></i> Go Back</button></a>
+    </div>
+{% endblock %}
